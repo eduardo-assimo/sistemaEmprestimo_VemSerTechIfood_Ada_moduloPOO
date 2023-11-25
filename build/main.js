@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const solicitacaoEmprestimo_1 = require("./solicitacaoEmprestimo");
+const solicitante_1 = require("./solicitante");
+const emprestimoPessoal_1 = require("./emprestimoPessoal");
+const solicitante1 = new solicitante_1.Solicitante(1, "Marcella", 30, 2000, true, true);
+const solicitacao = new solicitacaoEmprestimo_1.SolicitacaoEmprestimo(1);
+solicitacao.add(new emprestimoPessoal_1.EmprestimoPessoal(1, 1000, 10, solicitante1));
+const retorno = solicitacao.processar();
+console.log(retorno);
